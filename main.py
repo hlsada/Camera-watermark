@@ -70,8 +70,8 @@ def append_logo(exif_img, exif):
                 logo = Image.open(m['path'])
                 print('图片的高度：',logo.height,'图片的宽度：',logo.width)
     if logo is not None:
-        logo_width=math.floor(logo.width*(exif_img.height*0.7/logo.height))
-        logo_height = math.floor(exif_img.height*0.7)
+        logo_width=math.floor(logo.width*(exif_img.height*0.5/logo.height))
+        logo_height = math.floor(exif_img.height*0.5)
         logo = logo.resize((logo_width, logo_height), Image.Resampling.LANCZOS)
         return logo
 
